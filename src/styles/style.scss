@@ -1,0 +1,110 @@
+@import 'config.scss';
+
+body {
+    height: 100vh;
+}
+
+#root {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.columns {
+    display: flex;
+    box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+
+    .column:first-child {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .column:last-child {
+        border-radius: 0 8px 8px 0;
+    }
+
+    .column {
+        width: 300px;
+        padding: 32px 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 96px;
+        justify-content: space-between;
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            .media {
+                width: 64px;
+            }
+    
+            .title {
+                text-transform: uppercase;
+                font-family: 'Big Shoulders Display';
+                font-weight: 700;
+                color: $veryLightGray;
+            }
+    
+            .description {
+                color: $transparentWhite;
+                line-height: 1.6rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        .learn-more {
+            border: 1px solid transparent;
+            padding: 12px 16px;
+            border-radius: 24px;
+            width: 128px;
+            cursor: pointer;
+
+            &.brightOrange {
+                color: $brightOrange;
+
+                &:hover {
+                    border: 1px solid $veryLightGray;
+                    color: $veryLightGray;
+                    background: $brightOrange;
+                }
+            }
+    
+            &.darkCyan {
+                color: $darkCyan;
+
+                &:hover {
+                    border: 1px solid $veryLightGray;
+                    color: $veryLightGray;
+                    background: $darkCyan;
+                }
+            }
+    
+            &.veryDarkCyan {
+                color: $veryDarkCyan;
+
+                &:hover {
+                    border: 1px solid $veryLightGray;
+                    color: $veryLightGray;
+                    background: $veryDarkCyan;
+                }
+            }
+        }
+
+        &.brightOrange {
+            background: $brightOrange;
+        }
+
+        &.darkCyan {
+            background: $darkCyan;
+        }
+
+        &.veryDarkCyan {
+            background: $veryDarkCyan;
+        }
+    }
+}
+
+@import 'media.scss';

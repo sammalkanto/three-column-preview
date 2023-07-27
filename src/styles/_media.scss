@@ -1,0 +1,18 @@
+@media (max-width: 1000px) {
+    #root {
+        height: auto;
+        padding: 48px;
+    }
+
+    .columns {
+        flex-direction: column;
+
+        .column:first-child {
+            border-radius: 8px 8px 0 0;
+        }
+    
+        .column:last-child {
+            border-radius: 0 0 8px 8px;
+        }
+    }
+}
